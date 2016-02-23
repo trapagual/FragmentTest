@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="María Antonia"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/tvPacienteDetalle"
+        android:layout_marginTop="5dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:isScrollContainer="true">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="MARTES"
+                android:id="@+id/tvDiaSemDetalle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                android:text="12/02/2016"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/tvDiaDetalle"
+                android:clickable="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="10:00"
+                android:id="@+id/tvHDesde"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_navigation_arrow_forward_red"
+                android:id="@+id/ivFlecha" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="11:00"
+                android:id="@+id/tvHHasta"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:clickable="true"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etLugar"
+                android:editable="true"
+                android:enabled="true"
+                android:hint="Lugar de la consulta"
+                android:layout_weight="1"
+                android:gravity="left" />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FAC"
+                android:id="@+id/swFactura"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:checked="false" />
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/etObservaciones"
+            android:maxLines="8"
+            android:lines="4"
+            android:hint="Observaciones..."
+            android:gravity="top|left" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#7c1111"
+                android:layout_marginTop="10dp">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ibCancelar"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_navigation_arrow_back" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="10"
+                    android:id="@+id/ibEliminar"
+                    android:layout_gravity="center"
+                    android:text="Eliminar"
+                    android:drawableLeft="@drawable/ic_action_delete_event"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="10"
+                    android:layout_gravity="center"
+                    android:id="@+id/imageButton2"
+                    android:text="Guardar"
+                    android:drawableLeft="@drawable/ic_grabar_evento"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

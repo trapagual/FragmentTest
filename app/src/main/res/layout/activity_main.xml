@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="es.trapasoft.android.fragmenttest.MainActivity">
+
+    <include android:id="@+id/app_bar" layout="@layout/app_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Texto Izquierda"
+            android:id="@+id/textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Texto Derecha"
+            android:id="@+id/textView3"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+
+
+<!-- PRUEBA
+    <fragment
+        android:id="@+id/fragment1"
+        android:name="es.trapasoft.android.fragmenttest.FragmentAgenda"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/list_fragment" />
+EN VEZ DE AGREGAR ESTATICAMENTE EL FRAGMENTO, LO AGREGO
+POR PROGRAMA DESDE LA MAIN ACTIVITY Y AQUI PONGO UN PLACEHOLDER
+QUE ES UNA FRAMELAYOUT -->
+    <FrameLayout
+        android:id="@+id/fragment_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+</LinearLayout>

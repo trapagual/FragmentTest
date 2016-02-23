@@ -1,0 +1,45 @@
+
+
+	PASO A PASO LISTFRAGMENTS CON PARAMETROS Y TOOLBAR
+	
+	CREAR ACTIVITY TALCUAL
+	AÑADIRLE FRAGMENT EN EL LAYOUT
+		<fragment
+        android:id="@+id/fragment1"
+        android:name="es.trapasoft.android.fragmenttest.FragmentAgenda"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/list_fragment" />
+	CREAR OBJETO JAVA PARA EL LISTFRAGMENT (sin parametros)
+	EL LISTFRAGMENT SE CARGA DESDE UN ARRAY ESTATICO DE CADENAS EN EL strings.xml
+	CREAR LAYOUT PARA EL FRAGMENT QUE CONTIENE EL SITIO PARA EL LISTVIEW Y EL TEXTVIEW PARA VACIO
+		<ListView
+			android:id="@android:id/list"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+		</ListView>
+
+		<TextView
+			android:id="@android:id/empty"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" >
+
+	CREAR LAYOUT PARA LA BARRA DE TAREAS. NO CONTIENE NADA
+		<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/colorPrimary">
+		</android.support.v7.widget.Toolbar>
+	CREAR LA BARRA DE TAREAS EN MAIN ACTIVITY
+		private void crearToolbar() {
+			toolbar = (Toolbar) findViewById(R.id.app_bar);
+			setSupportActionBar(toolbar);
+		}	
+	CAMBIAR style.xml PARA BUSCAR UN TEMA QUE =NO= TENGA ACTION BAR
+		<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		
+	CAMBIO EN LISTFRAGMENT: RECOGER LA LISTA DE VALORES COMO UN PARAMETRO QUE LE PASA ACTIVITY MAIN PARA ELLO
+	- Crear constructor publico vacio (OBLIGATORIO)
+	- Crear metodo newInstance(Bundle args) para recoger los parametros que se le pasen al fragment
+	- Crear public static final String TAG = "FragmentAgenda"; tag unica para cada fragmento
+	

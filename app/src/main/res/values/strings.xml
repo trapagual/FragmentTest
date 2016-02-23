@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">FragmentTest</string>
+    <string name="hola">Hola App Bar</string>
+    <string name="mnu_config">Configuración</string>
+    <string name="usuario">No hay cuenta</string>
+    <string name="mnu_next">Siguiente</string>
+
+    <string name="selCalendario">Elige un calendario:</string>
+    <string name="calendario">No hay calendario</string>
+    <string name="hintUsuario">Cuenta de Usuario</string>
+    <string name="hintCalendario">Calendario</string>
+    <string name="mnu_cambiar_calendario">Cambiar Calendario</string>
+    <string name="mnu_cambiar_cuenta">Cambiar Cuenta</string>
+    <string name="mnu_borrar_preferencias">ELIMINAR preferencias</string>
+
+    <string-array name="Planets">
+        <item>Sun</item>
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
+</resources>
